@@ -3,8 +3,12 @@ class UsersController < ApplicationController
     erb :'users/new'
   end
 
-  post '/' do
+  post '/signup' do
     user = User.new(params)
-    
+    if user.save
+      redirect to '/pokedex'
+    else
+      redirect to '/signup'
+    end
   end
 end
