@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "crud-pokedex-application"
   end
 
-  get '/' do
-    "Hello world!"
+  get '/pokedex' do
+    "Welcome to your Pokedex!"
   end
 end
