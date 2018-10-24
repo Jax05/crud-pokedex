@@ -9,8 +9,4 @@ class ApplicationController < Sinatra::Base
   get '/' do
     erb :index
   end
-
-  get '/pokedex' do
-    "Welcome to your Pokedex!"
-  end
 end
