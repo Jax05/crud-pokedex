@@ -12,6 +12,20 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/login' do
+    erb :'users/login'
+  end
+
+  post '/login' do
+    @user = User.find_by_username(params[:username])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect to '/pokemon'
+    else
+      redirect to '/login'
+    end
+  end
+
   get '/user/:id' do
     @user = User.find(params[:id])
     erb :'users/show'
