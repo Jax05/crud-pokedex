@@ -1,5 +1,5 @@
 class PokemonController < ApplicationController
-  get '/pokedex' do
+  get '/pokemon' do
     "Welcome to your Pokedex!"
   end
 end

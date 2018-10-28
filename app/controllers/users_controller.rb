@@ -4,9 +4,9 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    user = User.new(params)
-    if user.save
-      redirect to '/pokedex'
+    @user = User.new(params)
+    if @user.save
+      redirect to '/pokemon'
     else
       redirect to '/signup'
     end
