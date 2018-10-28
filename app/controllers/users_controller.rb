@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   get '/signup' do
+    redirect to '/pokemon' if logged_in?
     erb :'users/new'
   end
 
@@ -14,6 +15,7 @@ class UsersController < ApplicationController
   end
 
   get '/login' do
+    redirect to '/pokemon' if logged_in?
     erb :'users/login'
   end
 
