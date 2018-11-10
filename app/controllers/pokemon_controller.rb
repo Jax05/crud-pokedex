@@ -1,5 +1,5 @@
 class PokemonController < ApplicationController
   get '/pokemon' do
-    "Welcome to your Pokedex!"
+    erb :'pokemon/index'
   end
 end
