@@ -1,4 +1,5 @@
 <h1><%= @pokemon.name %> was added by <a href="/user/<%= @pokemon.user.slug %>"><%= @pokemon.user.username %></a></h1>
 <h2><%= @pokemon.type_name %> Type</h2>
 <p><%= @pokemon.description %></p>
+<a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
 <a href="/logout">Logout</a>
