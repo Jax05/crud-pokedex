@@ -3,7 +3,7 @@ class PokemonController < ApplicationController
     erb :'pokemon/index'
   end
 
-  get 'pokemon/new' do
+  get '/pokemon/new' do
     erb :'pokemon/new'
   end
 end
