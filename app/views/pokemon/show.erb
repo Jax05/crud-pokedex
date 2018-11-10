@@ -2,4 +2,8 @@
 <h2><%= @pokemon.type_name %> Type</h2>
 <p><%= @pokemon.description %></p>
 <a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+<form action="/pokemon/<%= @pokemon.id %>" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete" />
+  <input type="submit" value="Delete" />
+</form>
 <a href="/logout">Logout</a>
