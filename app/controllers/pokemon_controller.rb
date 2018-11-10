@@ -46,7 +46,8 @@ class PokemonController < ApplicationController
 
   delete '/pokemon/:id' do
     @pokemon = Pokemon.find(params[:id])
-    if @pokemon.destroy
+    if current_user.pokemon.include?(@pokemon)
+      @pokemon.destroy
       redirect to '/pokemon'
     else
       redirect to "/pokemon/#{@pokemon.id}"
