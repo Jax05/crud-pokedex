@@ -3,10 +3,9 @@
 <!-- need to loop through all pokemon and display them in a list -->
 <ol>
   <!-- clicking the name of a Pokemon takes you to pokemon/show -->
-  <a href="#"><li>A Pokemon</li></a>
-  <li>A Pokemon</li>
-  <li>A Pokemon</li>
-  <li>A Pokemon</li>
+  <% @pokemon.each do |pokemon| %>
+    <li><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></li>
+  <% end %>
 </ol>
 <!-- link to pokemon/new -->
 <a>Add Pokemon to Pokedex</a>
