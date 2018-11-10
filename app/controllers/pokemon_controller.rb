@@ -22,6 +22,11 @@ class PokemonController < ApplicationController
   end
 
   get '/pokemon/:id/edit' do
-    erb :'pokemon/edit'
+    @pokemon = Pokemon.find(params[:id])
+    if current_user.pokemon.include?(@pokemon)
+      erb :'pokemon/edit'
+    else
+      redirect to "/pokemon/#{@pokemon.id}"
+    end
   end
 end
