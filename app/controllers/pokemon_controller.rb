@@ -29,4 +29,8 @@ class PokemonController < ApplicationController
       redirect to "/pokemon/#{@pokemon.id}"
     end
   end
+
+  patch '/pokemon/:id' do
+    @pokemon = Pokemon.find(params[:id])
+  end
 end
