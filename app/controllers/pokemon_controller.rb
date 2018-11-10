@@ -1,10 +1,12 @@
 class PokemonController < ApplicationController
   get '/pokemon' do
+    redirect to '/login' unless logged_in?
     @pokemon = Pokemon.all
     erb :'pokemon/index'
   end
 
   get '/pokemon/new' do
+    redirect to '/login' unless logged_in?
     erb :'pokemon/new'
   end
 
@@ -18,11 +20,13 @@ class PokemonController < ApplicationController
   end
 
   get '/pokemon/:id' do
+    redirect to '/login' unless logged_in?
     @pokemon = Pokemon.find(params[:id])
     erb :'pokemon/show'
   end
 
   get '/pokemon/:id/edit' do
+    redirect to '/login' unless logged_in?
     @pokemon = Pokemon.find(params[:id])
     if current_user.pokemon.include?(@pokemon)
       erb :'pokemon/edit'
