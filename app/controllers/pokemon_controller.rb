@@ -1,5 +1,6 @@
 class PokemonController < ApplicationController
   get '/pokemon' do
+    @pokemon = Pokemon.all
     erb :'pokemon/index'
   end
 
