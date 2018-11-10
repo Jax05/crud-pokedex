@@ -38,4 +38,13 @@ class PokemonController < ApplicationController
       redirect to "/pokemon/#{@pokemon.id}/edit"
     end
   end
+
+  delete '/pokemon/:id' do
+    @pokemon = Pokemon.find(params[:id])
+    if @pokemon.destroy
+      redirect to '/pokemon'
+    else
+      redirect to "/pokemon/#{@pokemon.id}"
+    end
+  end
 end
