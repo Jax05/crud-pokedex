@@ -32,5 +32,10 @@ class PokemonController < ApplicationController
 
   patch '/pokemon/:id' do
     @pokemon = Pokemon.find(params[:id])
+    if @pokemon.update(params[:pokemon])
+      redirect to "/pokemon/#{@pokemon.id}"
+    else
+      redirect to "/pokemon/#{@pokemon.id}/edit"
+    end
   end
 end
