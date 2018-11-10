@@ -20,4 +20,8 @@ class PokemonController < ApplicationController
     @pokemon = Pokemon.find(params[:id])
     erb :'pokemon/show'
   end
+
+  get '/pokemon/:id/edit' do
+    erb :'pokemon/edit'
+  end
 end
