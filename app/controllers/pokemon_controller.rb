@@ -15,4 +15,9 @@ class PokemonController < ApplicationController
       redirect to '/pokemon/new'
     end
   end
+
+  get '/pokemon/:id' do
+    @pokemon = Pokemon.find(params[:id])
+    erb :'pokemon/show'
+  end
 end
