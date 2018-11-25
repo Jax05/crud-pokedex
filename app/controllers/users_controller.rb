@@ -26,7 +26,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect to '/pokemon'
     else
-      redirect to '/login'
+      flash[:error] = "Your username or password is incorrect."
+      erb :'users/login'
     end
   end
 
