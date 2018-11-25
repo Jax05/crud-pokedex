@@ -12,6 +12,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/' do
+    @user = current_user
     erb :index
   end
 
