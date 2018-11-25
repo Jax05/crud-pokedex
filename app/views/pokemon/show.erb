@@ -1,10 +1,14 @@
 <h1><%= @pokemon.name %> was added by <a href="/user/<%= @pokemon.user.slug %>"><%= @pokemon.user.username %></a></h1>
 <h2><%= @pokemon.type_name %> Type</h2>
 <p><%= @pokemon.description %></p>
-<a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
-<form action="/pokemon/<%= @pokemon.id %>" method="POST">
-  <input id="hidden" type="hidden" name="_method" value="delete" />
-  <input type="submit" value="Delete" />
-</form>
+
+<% if @pokemon.user == current_user %>
+  <a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+  <form action="/pokemon/<%= @pokemon.id %>" method="POST">
+    <input id="hidden" type="hidden" name="_method" value="delete" />
+    <input type="submit" value="Delete" />
+  </form>
+<% end %>
+
 <a href="/pokemon">Back to Index</a>
 <a href="/logout">Logout</a>
