@@ -15,7 +15,8 @@ class PokemonController < ApplicationController
     if @pokemon.save
       redirect to '/pokemon'
     else
-      redirect to '/pokemon/new'
+      flash[:error] = "All fields are required."
+      erb :'pokemon/new'
     end
   end
 
