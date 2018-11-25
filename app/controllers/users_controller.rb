@@ -10,7 +10,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect to '/pokemon'
     else
-      redirect to '/signup'
+      flash[:error] = "All fields are required."
+      erb :'users/new'
     end
   end
 
