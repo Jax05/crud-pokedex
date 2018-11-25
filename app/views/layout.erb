@@ -5,9 +5,15 @@
     <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
   </head>
   <body>
-    <% if flash[:error] %>
-      <span><%= flash[:error] %></span>
-    <% end %>
-    <%= yield %>
+    <div class="container">
+      <div class="columns">
+        <div class="column col-6">
+          <% if flash[:error] %>
+            <span><%= flash[:error] %></span>
+          <% end %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
