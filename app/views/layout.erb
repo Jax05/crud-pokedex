@@ -4,6 +4,9 @@
     <title>CRUD Pokedex</title>
   </head>
   <body>
+    <% if flash[:error] %>
+      <span><%= flash[:error] %></span>
+    <% end %>
     <%= yield %>
   </body>
 </html>
