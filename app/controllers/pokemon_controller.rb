@@ -41,6 +41,7 @@ class PokemonController < ApplicationController
     if @pokemon.update(params[:pokemon])
       redirect to "/pokemon/#{@pokemon.id}"
     else
+      flash[:error] = "All fields are required."
       redirect to "/pokemon/#{@pokemon.id}/edit"
     end
   end
