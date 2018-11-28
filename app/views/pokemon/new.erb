@@ -1,13 +1,16 @@
 <h1>Add Pokemon</h1>
 <form action="/pokemon" method="POST">
-    <label for="name">Name:</label>
-    <input id="name" name="name" type="textbox" />
-
-    <label for="type_name">Type:</label>
-    <input id="type_name" name="type_name" type="textbox" />
-
-    <label for="description">Short Description:</label>
-    <input id="description" name="description" type="textbox" />
-    
+  <div class="form-group">
+    <label class="form-label" for="name">Name:</label>
+    <input class="form-input" id="name" name="name" type="textbox" />
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="type_name">Type:</label>
+    <input class="form-input" id="type_name" name="type_name" type="textbox" />
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="description">Short Description:</label>
+    <input class="form-input" id="description" name="description" type="textbox" />
+  </div>
   <input type="submit" />
 </form>
