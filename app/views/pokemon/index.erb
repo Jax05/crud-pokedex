@@ -1,5 +1,4 @@
-<h1>Welcome to the Pokedex!</h1>
-<h2>Here's a list of Pokemon encountered in the wild.</h2>
+<h1>Here's a list of Pokemon encountered in the wild.</h1>
 <ol>
   <% @pokemon.each do |pokemon| %>
     <li><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></li>
