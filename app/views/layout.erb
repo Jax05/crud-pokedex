@@ -6,14 +6,13 @@
   </head>
   <style>
     .container {
-      width: 800px;
+      width: 80%;
       margin: 0 auto;
     }
   </style>
   <body>
     <div class="container">
       <% if logged_in? %>
-        <!-- nav layout if logged in -->
         <header class="navbar">
           <section class="navbar-section">
             <a href="/" class="navbar-brand mr-2">CRUD Pokedex</a>
@@ -25,7 +24,6 @@
           </section>
       </header>
       <% else %>
-        <!-- nav layout if not logged in -->
         <header class="navbar">
           <section class="navbar-section">
             <a href="/" class="navbar-brand mr-2">CRUD Pokedex</a>
