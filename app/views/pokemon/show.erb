@@ -3,12 +3,9 @@
 <p><%= @pokemon.description %></p>
 
 <% if @pokemon.user == current_user %>
-  <a href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+  <a class="btn" href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
   <form action="/pokemon/<%= @pokemon.id %>" method="POST">
     <input id="hidden" type="hidden" name="_method" value="delete" />
-    <input type="submit" value="Delete" />
+    <input class="btn" type="submit" value="Delete" />
   </form>
 <% end %>
-
-<a href="/pokemon">Back to Index</a>
-<a href="/logout">Logout</a>
