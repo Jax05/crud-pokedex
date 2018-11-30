@@ -1,17 +1,17 @@
 <h1>Edit <%= @pokemon.name %></h1>
 <form action="/pokemon/<%= @pokemon.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="patch" />
-  <p>
-    <label for="name">Name:</label>
-    <input id="name" name="[pokemon][name]" type="textbox" value="<%= @pokemon.name %>" />
-  </p>
-  <p>
-    <label for="type_name">Type:</label>
-    <input id="type_name" name="[pokemon][type_name]" type="textbox" value="<%= @pokemon.type_name %>" />
-  </p>
-  <p>
-    <label for="description">Short Description:</label>
-    <input id="description" name="[pokemon][description]" type="textbox" value="<%= @pokemon.description %>" />
-  </p>
+  <div class="form-group">
+    <label class="form-label" for="name">Name:</label>
+    <input class="form-input" id="name" name="[pokemon][name]" type="textbox" value="<%= @pokemon.name %>" />
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="type_name">Type:</label>
+    <input class="form-input" id="type_name" name="[pokemon][type_name]" type="textbox" value="<%= @pokemon.type_name %>" />
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="description">Short Description:</label>
+    <input class="form-input" id="description" name="[pokemon][description]" type="textbox" value="<%= @pokemon.description %>" />
+  </div>
   <input type="submit" />
 </form>
