@@ -3,9 +3,11 @@
 <p><%= @pokemon.description %></p>
 
 <% if @pokemon.user == current_user %>
-  <a class="btn" href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
-  <form action="/pokemon/<%= @pokemon.id %>" method="POST">
-    <input id="hidden" type="hidden" name="_method" value="delete" />
-    <input class="btn" type="submit" value="Delete" />
-  </form>
+  <div class="columns">
+    <a class="btn column col-6" href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+    <form class="column col-6" action="/pokemon/<%= @pokemon.id %>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="delete" />
+      <input class="btn btn-error btn-block" type="submit" value="Delete Pokemon" />
+    </form>
+  </div>
 <% end %>
