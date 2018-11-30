@@ -1,5 +1,5 @@
 <h1><%= @pokemon.name %></h1>
-<h2><%= @pokemon.name %> is a <%= @pokemon.type_name %> type Pokemon added by <a href="/user/<%= @pokemon.user.slug %>"><%= @pokemon.user.username %></a></h2>
+<p><i><%= @pokemon.name %></i> is a <u><%= @pokemon.type_name %></u> type Pokemon added by <a href="/user/<%= @pokemon.user.slug %>"><%= @pokemon.user.username %></a></p>
 <p><%= @pokemon.description %></p>
 
 <% if @pokemon.user == current_user %>
