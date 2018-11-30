@@ -1,8 +1,7 @@
-<h1>Pokedex for <%= @user.username %></h1>
+<h1>Profile for <%= @user.username %></h1>
+<h2>A list of Pokemon they've added to the Pokedex</h2>
 <ol>
   <% @user.pokemon.each do |pokemon| %>
     <li><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></li>
   <% end %>
 </ol>
-<a href="/pokemon">Back to Index</a>
-<a href="/logout">Log Out</a>
