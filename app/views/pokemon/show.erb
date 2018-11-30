@@ -1,6 +1,6 @@
 <h1><%= @pokemon.name %></h1>
 <p><i><%= @pokemon.name %></i> is a <u><%= @pokemon.type_name %></u> type Pokemon added by <a href="/user/<%= @pokemon.user.slug %>"><%= @pokemon.user.username %></a></p>
-<p><%= @pokemon.description %></p>
+<p>Can only be described as "<%= @pokemon.description.downcase %>"</p>
 
 <% if @pokemon.user == current_user %>
   <div class="columns">
