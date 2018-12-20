@@ -9,6 +9,13 @@
       width: 60%;
       margin: 0 auto;
     }
+
+    .error {
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      padding: 2px;
+    }
   </style>
   <body>
     <div class="container">
@@ -36,7 +43,7 @@
         </header>
         <% end %>
         <% if flash[:error] %>
-          <span><%= flash[:error] %></span>
+          <span class="error"><%= flash[:error] %></span>
         <% end %>
         <%= yield %>
       </div>
