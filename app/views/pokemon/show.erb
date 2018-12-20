@@ -4,8 +4,8 @@
 
 <% if @pokemon.user == current_user %>
   <div class="columns">
-    <a class="btn column col-6" href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
-    <form class="column col-6" action="/pokemon/<%= @pokemon.id %>" method="POST">
+    <a class="btn column col-3" href="/pokemon/<%= @pokemon.id %>/edit">Edit Pokemon</a>
+    <form class="column col-3" action="/pokemon/<%= @pokemon.id %>" method="POST">
       <input id="hidden" type="hidden" name="_method" value="delete" />
       <input class="btn btn-error btn-block" type="submit" value="Delete Pokemon" />
     </form>
