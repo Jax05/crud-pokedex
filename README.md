@@ -6,3 +6,17 @@ A Sinatra project developed for [Flatiron School](https://www.flatironschool.com
 - run `db:migrate`
 - run `db:seed`
 - run `shotgun` and navigate to the location it's listening on in your web browser (ex. 127.0.0.1:9393)
+
+## Contributions
+Contributions are welcome!
+
+Feel free to ask for feedback on your ideas before submitting a pull request.
+
+Please search issues and pull requests before adding something new to avoid duplications.
+
+The following types of contributions are welcome:
+
+- Reporting a bug
+- Discussing current code
+- Submitting a fix
+- Proposing new features
