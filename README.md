@@ -3,8 +3,9 @@ A Sinatra project developed for [Flatiron School](https://www.flatironschool.com
 
 ## Installation
 - clone this repo
-- run `db:migrate`
-- run `db:seed`
+- run `bundle`
+- run `rake db:migrate`
+- run `rake db:seed`
 - run `shotgun` and navigate to the location it's listening on in your web browser (ex. 127.0.0.1:9393)
 
 ## Contributions
