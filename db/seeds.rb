@@ -1,4 +1,4 @@
-User.create(username: "Trainer", password: "c4tchem4all")
+User.create(username: "Trainer", password: "bethebest")
 
 @user = User.find_by_username("Trainer")
 
