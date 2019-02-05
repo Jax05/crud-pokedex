@@ -13,7 +13,7 @@ class PokemonController < ApplicationController
   post '/pokemon' do
     @pokemon = current_user.pokemon.build(params)
     if @pokemon.save
-      redirect to '/pokemon'
+      redirect to "/pokemon/#{@pokemon.id}"
     else
       flash[:error] = "All fields are required."
       erb :'pokemon/new'
