@@ -38,11 +38,14 @@ class PokemonController < ApplicationController
 
   patch '/pokemon/:id' do
     @pokemon = Pokemon.find(params[:id])
-    if @pokemon.update(params[:pokemon])
+    if !current_user.pokemon.include?(@pokemon)
+      flash[:error] = "You can only edit Pokemon that belong to you."
+      redirect to '/pokemon'
+    elsif @pokemon.update(params[:pokemon])
       redirect to "/pokemon/#{@pokemon.id}"
     else
       flash[:error] = "All fields are required."
-      redirect to "/pokemon/#{@pokemon.id}/edit"
+      redirect to "/pokemon/#{@pokemon.id}"
     end
   end
 
